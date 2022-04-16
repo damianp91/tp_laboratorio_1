@@ -7,7 +7,8 @@ int get_NumEnte(int* pResultado, char* pMensaje, char* pMensError, int min, int 
 	int numero;
 	if(pResultado != NULL && pMensaje != NULL && pMensError != NULL && min <= max){
 
-		prinf("%s", pMensaje);
+		printf("%s", pMensaje);
+		fflush(stdin);
 		scanf("%d", &numero);
 
 		if(numero >= min && numero <= max){
@@ -29,7 +30,8 @@ int get_NumFlota(float* pResultado, char* pMensaje, char* pMensError, float min,
 	float numero;
 	if(pResultado != NULL && pMensaje != NULL && pMensError != NULL && min <= max){
 
-		prinf("%s", pMensaje);
+		printf("%s", pMensaje);
+		fflush(stdin);
 		scanf("%f", &numero);
 
 		if(numero >= min && numero <= max){
@@ -52,9 +54,9 @@ int get_Caracter(char* pResultado, char* pMensaje, char* pMensError, char min, c
 	char caracter;
 	if(pResultado != NULL && pMensaje != NULL && pMensError != NULL && min <= max){
 
-		prinf("%s", pMensaje);
+		printf("%s", pMensaje);
 		fflush(stdin);
-		scanf("%d", &caracter);
+		scanf("%c", &caracter);
 
 		if(caracter >= min && caracter <= max){
 			*pResultado = caracter;

@@ -11,6 +11,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include "utn.h"
 
 
 int menu();
@@ -30,13 +31,20 @@ int main(void) {
 		case 1:
 
 
-			printf("Ingreso de km.\n");
+			if(get_NumFlota(&km, "Ingrese total de kilometros(km) de vuelo: ", "¡Datos incorrectos!\n", 8.0, 22000.0) == 1){
+				printf("Kilometros ingresados correctamente.\n");
+			}
 			break;
 
 		case 2:
 
+			if(get_NumFlota(&vAero, "Ingrese precio total de vuelo Aerolineas: ", "¡Datos incorrectos!\n", 0.0, 900000.0) == 1){
+				printf("Precio Aerolineas ingresado correctamente.\n\n");
+			}
 
-			printf("Ingreso de precios\n");
+			if(get_NumFlota(&laTam, "Ingrese precio total de vuelo Latam: ", "¡Datos incorrectos!\n", 8.0, 900000.0) == 1){
+				printf("Precio Latam ingresado correctamente.\n\n");
+			}
 			break;
 
 		case 3:
@@ -104,18 +112,15 @@ int menu(){
 	printf("5. Carga forzada de datos.\n");
 	printf("6. Salir.\n");
 	printf("-------------------------------------------------------------------\n");
-	printf("Ingrese opcion (1 a 6): ");
-	scanf("%d", &opcion);
+	if(get_NumEnte(&opcion, "Ingrese opcion (1-6): ", "Error. Ingrese un numero del 1 al 6\n", 1, 6) == 1){
+		printf("Opcion ingresada...\n");
+	}
+	else{
+		opcion = 8;
+	}
 	printf("===================================================================\n");
-
 	return opcion;
 }
-
-
-
-
-
-
 
 
 
