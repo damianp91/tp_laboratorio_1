@@ -13,17 +13,18 @@
 #include <stdlib.h>
 #include "utn.h"
 #include "menuAgencia.h"
+#include "operaciones.h"
 
 
 int main(void) {
 	setbuf(stdout, NULL);
 	char seguir = 'n';
-	float km;
-	float vAero;
-	float laTam;
+	float km = 0;
+	float vAero = 0; float dAero; float cAero; float bAero; float uAero;
+	float laTam = 0; float dLatam; float cLatam; float bLatam; float uLatam;
 
 	do{
-		switch(menu()){
+		switch(menu(km, vAero, laTam)){
 		case 1:
 
 
@@ -45,12 +46,21 @@ int main(void) {
 
 		case 3:
 
-			printf("Calculo costos\n");
+			debitoDes10(vAero, &dAero);
+			creditoInte25(vAero, &cAero);
+			bitCoin(vAero, &bAero);
+			preUnitario(vAero, km, &uAero);
+
+			debitoDes10(laTam, &dLatam);
+			creditoInte25(laTam, &cLatam);
+			bitCoin(laTam, &bLatam);
+			preUnitario(laTam, km, &uLatam);
 			break;
 
 		case 4:
 
-			printf("Informe\n");
+			informe("Aerolineas", vAero, dAero, cAero, bAero, uAero);
+			informe("Latam", laTam, dLatam, cLatam, bLatam, uLatam);
 			break;
 
 		case 5:
@@ -79,11 +89,4 @@ int main(void) {
 
 	return EXIT_SUCCESS;
 }
-
-
-
-
-
-
-
 
