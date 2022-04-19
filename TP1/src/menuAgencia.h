@@ -3,14 +3,14 @@
 
 
 /**
- * \brief menu de opciones funcion sin ingreso de datos pero que devuelve un int segun opcion seleccionada
- * \param km de tipo float.
+ * \brief menu de opciones funcion con ingreso de datos pero que devuelve un int segun opcion seleccionada
+ * \param km de tipo int.
  * \param empre1 de tipo float
  * \param empre1 de tipo float
  *
  *
  */
-int menu(float km, float empre1, float empre2);
+int menu(int km, float empre1, float empre2);
 
 
 /**
@@ -25,5 +25,13 @@ int menu(float km, float empre1, float empre2);
  *
  */
 void informe(char* pMensaje, float empresa, float debito, float credito, float bitCoin, float unitario);
+
+
+/**
+ * \brief menu de opciones funcion sin ingreso de datos pero que devuelve un int segun opcion seleccionada
+ * \param vacio
+ *
+ */
+int cargaForzada();
 
 #endif /* MENUAGENCIA_H_ */

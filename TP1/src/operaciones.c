@@ -50,11 +50,11 @@ int bitCoin(float precio, float* pResultado){
 }
 
 
-int preUnitario(float precio, float kilometros, float* pResultado){
+int preUnitario(float precio, int kilometros, float* pResultado){
 	int retorno = 0;
 	float unitario;
 
-	if(precio >= 0 && pResultado != NULL){
+	if(precio >= 0 && pResultado != NULL && kilometros > 0){
 
 		unitario = precio / kilometros;
 		*pResultado = unitario;

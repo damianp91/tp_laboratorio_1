@@ -4,14 +4,14 @@
 
 
 
-int menu(float km, float empre1, float empre2){
+int menu(int km, float empre1, float empre2){
 
 	int opcion;
 
 	printf("===================================================================\n");
 	printf("\tMENU DE OPCIONES.\n");
 	printf("===================================================================\n");
-	printf("1. Ingresar kilometros (km = %.2f).\n", km);
+	printf("1. Ingresar kilometros (km = %d).\n", km);
 	printf("2. Ingresar precio de vuelos.\n");
 	printf("   - Precio vuelo Aerolineas: %.2f\n", empre1);
 	printf("   - Precio vuelo Latam: %.2f\n", empre2);
@@ -45,3 +45,30 @@ void informe(char* pMensaje, float empresa, float debito, float credito, float b
 	printf("d) Mostrar precio unitario: $%.2f\n\n", unitario);
 
 }
+
+
+int cargaForzada(){
+
+	int opcion;
+
+	printf("Ingrese la opcion que desea cambiar:\n");
+	printf("1) kilometros.\n");
+	printf("2) Precio de vuelos.\n");
+	if(get_NumEnte(&opcion, "Ingrese opcion (1 o 2): ", "Error. Ingrese un numero del 1 al 2\n", 1, 2) == 1){
+		printf("Opcion ingresada correctamente.\n");
+	}
+	return opcion;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -44,11 +44,11 @@ int bitCoin(float precio, float* pResultado);
  *
  * \param pResultado puntero float a direccion de memoria de resultado que se envia si se ingresan los datos correctamente
  * \param precio de tipo float se pide a usuario para ejecutar la funcion.
- * \param kilometros de tipo float se pide a usuario para ejecutar la funcion.
+ * \param kilometros de tipo int se pide a usuario para ejecutar la funcion.
  *
  *
  */
-int preUnitario(float precio, float kilometros, float* pResultado);
+int preUnitario(float precio, int kilometros, float* pResultado);
 
 
 #endif /* OPERACIONES_H_ */
