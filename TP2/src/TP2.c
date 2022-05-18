@@ -1,8 +1,8 @@
 /*
  ============================================================================
  Name        : TP2.c
- Author      : 
- Version     :
+ Author      : Cristian Damian Posada Vargas
+ Version     : 1
  Copyright   : Your copyright notice
  Description : Hello World in C, Ansi-style
  ============================================================================
@@ -15,7 +15,7 @@
 #include "ArrayPassenger.h"
 #include "menuListas.h"
 
-#define TAM 5
+#define TAM 2000
 #define TAM_PASS 3
 #define TAM_STATUS 6
 #define ASC 1
@@ -33,6 +33,7 @@ int main(void) {
 	char destino[10];
 	int contAlt = 0;
 	ePassenger pasajeros[TAM];
+
 	eTypePass tipoPasajeros[TAM_PASS] = {
 
 			{1, "TURISTA"},

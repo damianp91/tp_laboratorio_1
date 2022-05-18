@@ -512,33 +512,3 @@ int sortPassengersByCode(ePassenger lista[], int tam, int criterio){
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
