@@ -25,14 +25,21 @@ int menu(int km, float empre1, float empre2){
 	printf("5. Carga forzada de datos.\n");
 	printf("6. Salir.\n");
 	printf("-------------------------------------------------------------------\n");
+
 	if(get_NumEnte(&opcion, "Ingrese opcion (1-6): ", "Error. Ingrese un numero del 1 al 6\n", 1, 6) == 1){
+
 		printf("Opcion ingresada...\n");
 	}
+
 	else{
+
 		opcion = 8;
 	}
+
 	printf("===================================================================\n");
+
 	return opcion;
+
 }
 
 
@@ -57,7 +64,9 @@ int cargaForzada(){
 	if(get_NumEnte(&opcion, "Ingrese opcion (1 o 2): ", "Error. Ingrese un numero del 1 al 2\n", 1, 2) == 1){
 		printf("Opcion ingresada correctamente.\n");
 	}
+
 	return opcion;
+
 }
 
 
